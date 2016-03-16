@@ -1,0 +1,10 @@
+<div ng-controller="article1Ctrl">
+<div class="f-fr"><a href="#/article/opt"><button type="button" class="u-btn">添加</button></a></div>
+<table class="m-table">
+    <thead>
+        <tr><th>标题</th><th class="colb">发布时间</th><th class="colb">操作</th></tr>
+    </thead>
+    <tbody ng-repeat="d in data">
+        <tr><td><a>{{d.title}}</a></td><td>{{d.date}}</td><td><a href="#/article/opt/{{d._id}}">修改</a> | <a href="javascript:void(0);" ng-click="del(d._id)">删除</a></td></tr>
+    </tbody>
+</table>

@@ -1,0 +1,11 @@
+/*common*/
+.g-wrap2{width:95%;margin:0 auto;}
+.u-btn1,.u-btn2,.u-btn3,.u-btn4{width: 37px;height: 37px;margin: 0 auto;}
+.u-btn1{background: url('../img/icon.png') 372px -73px;}
+.u-btn2{background: url('../img/icon.png') 323px -74px;}
+.u-btn3{background: url('../img/icon.png') 424px -73px;}
+.u-btn4{background: url('../img/icon.png') 476px -70px;}
+
+.g-bd{width:100%;margin:0 auto;}
+.g-sd{float:right;}
+.g-mn{float:left;}

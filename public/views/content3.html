@@ -1,0 +1,38 @@
+{{include './public/header'}}
+{{include './public/mheader'}}
+			<div class="u-bgtauto">
+				<div class="g-bd2 f-cb">
+					<span>{{data.title}}</span>
+				</div>
+			</div>
+			<div class="g-bd g-bd3">
+				<div class="ftb">
+				<div class="ftb1">
+					<p>{{#data.desc}}</p>
+				</div>
+				<div class="ftb2">
+				<div class="f-tac">{{'更新日期：'+data.date.getFullYear()+'-'+data.date.getMonth()+1+'-'+data.date.getDate()}}</div>
+				<div>{{#data.content}}</div>
+				</div>
+				<div class="bk10"></div>
+				<nav class="m-page">
+					{{if data._id!='56a6ea0e32e975bedc807b06'}}
+					{{if pre=='' || pre._id=='56a6ea0e32e975bedc807b06'}}
+				    	<a href="#" class="pageprv z-dis">无</a>
+				    {{else}}
+				    	<a href="/article/tlp/find/{{pre.id}}" class="pageprv">{{pre.title}}</a>
+				    {{/if}}
+
+				    {{if next=='' || pre._id=='56a6ea0e32e975bedc807b06'}}
+				    	<a href="#" class="pageprv z-dis">无</a>
+				    {{else}}
+				    	<a href="/article/tlp/find/{{next.id}}" class="pagenxt">{{next.title}}</a>
+				     {{/if}}
+					 {{/if}}
+				</nav>
+			</div>
+		</div>
+			<div class="bk30"></div>
+		</div>
+	</div>
+{{include './public/footer'}}

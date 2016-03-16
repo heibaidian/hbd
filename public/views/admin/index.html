@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8"/>
+<title>湘西建材网</title>
+<meta name="keywords" content="湘西建材网"/>
+<meta name="description" content="湘西建材网"/>
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="/css/base.css"/>
+<link rel="stylesheet" href="/css/animation.css"/>
+<link rel="stylesheet" href="/css/admin.css"/>
+<link rel="shortcut icon" href="/img/favicon.ico"/>
+<link rel="apple-touch-icon" href="/img/touchicon.png"/>
+<script src="/js/lib/angular/angular.js"></script>
+<script src="/js/lib/angular-route/angular-route.js"></script>
+<script src="/js/lib/file.js"></script>
+<script src="/js/aj/app.js"></script>
+<script src="/js/aj/company/company.js"></script>
+<script src="/js/aj/design/design.js"></script>
+<script src="/js/aj/material/material.js"></script>
+<script src="/js/aj/module/module.js"></script>
+<script src="/js/aj/tel/tel.js"></script>
+<script src="/js/aj/article/article.js"></script>
+
+<link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
+<script src='/bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.css'>
+</head>
+<body>
+<div class="g-bd1 f-cb">
+    <div class="g-sd1">
+    	{{each list}}
+			<p><a href="#{{$value.url}}">{{$value.moduleTitle}}</a></p>
+		{{/each}}
+    </div>
+    <div class="g-mn1">
+        <div class="g-mn1c" ng-view>
+           
+        </div>
+    </div>
+</div>
+</body>
+</html>

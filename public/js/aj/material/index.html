@@ -1,0 +1,10 @@
+<div ng-controller="material1Ctrl">
+<div class="f-fr"><a href="#/material/opt"><button type="button" class="u-btn">添加</button></a></div>
+<table class="m-table">
+    <thead>
+        <tr><th>公司名</th><th class="colb">分类</th><th class="colb">操作</th></tr>
+    </thead>
+    <tbody ng-repeat="d in data">
+        <tr><td><a>{{d.title}}</a></td><td>{{d.cate}}</td><td><a href="#/material/opt/{{d._id}}">修改</a> | <a href="javascript:void(0);" ng-click="del(d._id)">删除</a></td></tr>
+    </tbody>
+</table>

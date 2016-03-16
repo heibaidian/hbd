@@ -1,0 +1,33 @@
+	<div class="m-form" ng-controller="design3Ctrl">
+	    <form name="" method="post">
+	        <fieldset>
+	            <legend>图库操作</legend>
+	            <div class="formitm">
+	                <label class="lab">子标题：</label>
+	                <div class="ipt">
+	                    <input type="text" class="u-ipt" ng-model="design.ptitle" />
+	                </div>
+	            </div>
+	            <div class="formitm">
+	                <label class="lab">图集：</label>
+	                <div class="ipt" ng-repeat="d in design.picurl">
+	                    <img ng-src="{{d.imgSrc}}" /><input type="button" value="删除" ng-click="del(d._id)">
+	                </div>
+	            </div>
+	           </fieldset>
+		</form>
+
+	            <form ng-submit="submit(obj)">
+					<div class="formitm">
+				   		<label class="lab">缩略图：</label>
+				        <div class="ipt">
+				   			<input type="file" ng-file-model="obj.testFile" accept="image/*" />
+				  			<input type="submit" value="upload">
+				  			<img ng-model="design.imgSrc" ng-src="{{design.imgSrc}}"/>
+				  		</div>
+			    	</div>
+    			</form>
+	      
+	    
+	    <div class="formitm formitm-1"><button class="u-btn" type="button" ng-click="update(design)">修改</button> <a href="#/design"><button class="u-btn" type="button">返回</button></a></div>
+	</div>

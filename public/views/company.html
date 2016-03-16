@@ -1,0 +1,43 @@
+{{include './public/header'}}
+{{include './public/mheader'}}
+			<div class="u-bgt">
+				<div class="g-bd2 f-cb">
+					<div class="u-btn4 f-fl"></div>
+					<div class="st f-fl"><span>装修公司</span></div>
+				</div>
+			</div>
+			<div class="g-bd g-bd3">
+				<div class="f-cb">
+					{{each list}}
+					{{if $index%3==0}}<div class="f-cb">{{/if}}
+					<div class="u-box f-fl {{if ($index+1)%3==0}}last{{/if}}">
+						<div class="pos">
+							<h2>{{$value.title}}</h2>
+							<div class="u-starpos">
+								<div class="u-star{{$value.star}}"></div>
+							</div>
+							<div class="bk10"></div>
+							<div class="maxdiv">
+								<a href="/company/tlp/find/{{$value.id}}"><img src="{{$value.imgSrc}}" /></a>
+							</div>
+						</div>
+					</div>
+					{{if ($index+1)%3==0}}</div>{{/if}}
+					{{/each}}
+				</nav>
+				</div>
+			</div>
+			<div class="bk30"></div>
+			</div>
+			<div>
+
+			<nav class="m-page">
+				{{each pageinfo}}
+			    <a href="/company/find/limit/{{$value.url}}" class="z-crt">{{$value.title}}</a>
+			    {{/each}}
+			</nav>
+
+			</div>
+			<div class="bk30"></div>
+	</div>
+{{include './public/footer'}}

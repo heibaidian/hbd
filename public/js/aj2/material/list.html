@@ -1,0 +1,31 @@
+<div class="g-bd g-bd3" ng-controller="material2Ctrl">
+<div class="m-selbox">
+<div class="f-cb">
+	<div class="f-fl"><h2>请选择建材类型：</h2></div>
+	<div class="f-fl"><select ng-model="q" ng-options="s as s for s in sort"><option value="">---类型---</option></select>
+	</div>
+</div>
+</div>
+<div class="f-cb">
+	<div ng-repeat="d in list.list | filter:q">
+	<div class="u-box f-fl" ng-class="{last:($index+1)%3==0}">
+		<div class="pos">
+			<h2>{{d.title}}</h2>
+			<div class="u-starpos">
+				<div class="u-star{{d.star}}"></div>
+			</div>
+			<div class="bk10"></div>
+			<div class="maxdiv">
+				<a href="material/tlp/find/{{d._id}}"><img ng-src="{{d.imgSrc}}" /></a>
+			</div>
+		</div>
+	<div ng-class="{'f-cb':($index+1)%3==0}"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bk10"></div>
+<nav class="m-page">
+    <a href="#/limit/{{d.url}}" class="z-crt" ng-repeat="d in list.pageinfo">{{d.title}}</a>
+</nav>

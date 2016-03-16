@@ -1,0 +1,54 @@
+{{include './public/header'}}
+{{include './public/mheader'}}
+			<div class="u-bgt">
+				<div class="g-bd2 f-cb">
+					<div class="u-btn1 f-fl"></div>
+					<div class="st f-fl"><span>效果图</span></div>
+				</div>
+			</div>
+			{{each list}}
+			<div class="g-bd g-bd3">
+				<h1>{{$value.mtitle}}</h1>
+					{{each $value.stylemore}}
+					{{if $index%3==0}}<div class="f-cb">{{/if}}
+					<div class="u-box f-fl {{if ($index+1)%3==0}}last{{/if}}">
+						<div class="pos" data="{{$value.id}}">
+							<h2>{{$value.ptitle}}</h2>
+							<span class="ct">{{$value.picurl.length}}</span>
+							<div class="bk10"></div>
+								<div class="f-cb">
+								{{each $value.picurl}}
+								{{if $index<1}}
+								<a data="{{$value.imgSrc}}"><div class="{{if $index%2==0}}f-fl{{else $index%2==1}}f-fr{{/if}}"><img src="{{$value.imgSrc}}" /></div></a>
+								{{/if}}
+								{{/each}}
+								</div>
+						</div>
+						</div>
+					{{if ($index+1)%3==0}}</div>{{/if}}
+					{{/each}}
+					{{if $value.stylemore.length%3!=0}}</div>{{/if}}
+			</div>
+			<div class="bk30"></div>
+			{{/each}}
+	<div class="m-dialog">
+		<div class="g-bd">
+			<!--<div class="f-cb"><div class="u-close"></div></div>-->
+		<div class="dialogbg" id="slide">
+			<div class="u-maskdiv"><img class="u-maskimg"/></div>
+		</div>
+		<div class="u-nav f-cb">
+			<div class="posl f-fl"><div class="u-pre"></div></div>
+			<div class="pos f-fl">
+				<ol>
+				</ol>
+			</div>
+			<div class="posr f-fr"><div class="u-nxt"></div></div>
+		</div>
+	</div>
+		</div>
+	</div>
+</div>
+<iframe frameborder="0" id="miframe" style="filter:progid:DXImageTransform.Microsoft.Alpha(opacity:0);position:absolute;top:0px;left:0px;width:100%;height:100%;display: none;" src="about:blank"></iframe>
+<script type="text/javascript" src="/js/domjs/design.js"></script>
+{{include './public/footer'}}

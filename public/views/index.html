@@ -1,0 +1,43 @@
+{{include './public/header'}}
+<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+{{include './public/loading'}}
+    <div class="p-body a-fadein">
+      <div class="bg"><img src="img/bg.jpg" class="bgimg"/></div>
+      <div class="g-wrap1">
+        <div class="g-wrap2">
+         <div class="g-bd f-cb">
+            <div class="g-mn">
+              <div class="f-fl u-logo"></div>
+              <div class="f-fl"><h1>湘西建材网</h1></div>
+            </div>
+         </div>
+         <div class="g-bd2 f-cb">
+            <div class="g-sd">
+                <div class="f-cb">
+                  <div class="f-fl u-bt"></div>
+                  <div class="f-fr"><h2>新房装修，一网搞定</h2></div>
+                </div>
+            </div>
+         </div>
+
+         <div class="g-bd mt f-cb">
+          {{each list}}
+		  {{if $index<4}}
+          <div class="g-sd{{$value.module}} a-rotatein">
+                <a href="{{$value.url}}"><div class="u-cor">
+                  <div class="btnpos">
+                    <div class="u-btn{{$value.module}}"></div>
+                    <span>{{$value.moduleTitle}}</span>
+                  </div>
+                </div></a>
+            </div>
+		 {{/if}}
+         {{/each}}
+         </div>
+         </div>
+      </div>
+    </div>
+<script type="text/javascript" src="/js/domjs/core.js"></script>
+{{include './public/footer'}}
