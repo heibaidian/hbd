@@ -13,7 +13,7 @@
 						    <div class="cnt"><a href="/article/tlp/find/{{$value.id}}">{{$value.title}}</a></div>
 						    <div class="date"><img src='{{$value.imgSrc}}'/></div>
 						</div>
-					{{/if}}
+					{{/if}
 					{{/each}}
 			</div>
 			<div class="bk30"></div>
