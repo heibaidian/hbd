@@ -5,6 +5,6 @@
         <tr><th>公司名</th><th class="colb">分类</th><th class="colb">操作</th></tr>
     </thead>
     <tbody ng-repeat="d in data">
-        <tr><td><a>{{d.title}}</a></td><td>{{d.cate}}</td><td><a href="#/material/opt/{{d._id}}">修改</a> | <a href="javascript:void(0);" ng-click="del(d._id)">删除</a></td></tr>
+        <tr><td><a>{{d.title}}</a><span ng-show="d.pass===0">（未审核）</span></td><td>{{d.cate}}</td><td><a href="#/material/opt/{{d._id}}">修改</a> | <a href="javascript:void(0);" ng-click="del(d._id)">删除</a></td></tr>
     </tbody>
 </table>

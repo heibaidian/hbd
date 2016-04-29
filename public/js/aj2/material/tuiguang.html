@@ -1,0 +1,39 @@
+<div class="m-form" ng-controller="material3Ctrl">
+	<div class="g-bd g-bd3">
+		<div class="m-selbox2">
+			<form name="" method="post">
+				<div >
+					<div><h2>经营品牌：</h2></div>
+					<div><input type="text" class="form-control" ng-model="material.title"/></div>
+				</div>
+				<div>
+					<div ><h2>品牌分类：</h2></div>
+					<div>
+						<select class="form-control" ng-model="material.cate" ng-options="s for s in sort">
+							<option value="">-- 选择品牌 --</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<div><h2>联系电话：</h2></div>
+					<div><input type="text" class="form-control" ng-model="material.tel"/></div>
+				</div>
+				<div>
+					<div><h2>店铺地址：</h2></div>
+					<div><input type="text" class="form-control" ng-model="material.address"/></div>
+				</div>
+				<div>
+					<div><h2>品牌logo：</h2></div>
+					<div>
+						<span class="btn btn-default btn-file">
+							<img ng-model="material.imgSrc" ng-src="{{imgSrc}}"/>
+							<input type="file" ng-file-model="obj.testFile" accept="image/*"/>
+						</span>
+						<input type="submit" value="上传" class="btn btn-default" ng-click="submit(obj)">
+					</div>
+				</div>
+				<button type="button" class="btn btn-submit" ng-click="opt(material)">免费推广</button>
+			</form>
+		</div>
+	</div>
+</div>

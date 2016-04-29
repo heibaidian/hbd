@@ -79,7 +79,7 @@ body{background-color: #eeeeee;}
 .g-bd3 .u-box .telpos{position: absolute;width: 31.4%;}
 .g-bd3 .u-box .telbg{background-color:rgba(0,0,0,0.5);width:100%;padding: 42.5% 0;}
 .g-bd3 .u-box .u-tel{background: url('../img/icon.png') 390px -171px;width: 76px;height: 83px;margin:0 auto;}
-.g-bd3 .m-selbox{padding:20px;line-height: 40px;}
+.g-bd3 .m-selbox,.g-bd3 .m-selbox2{padding:20px;line-height: 40px;}
 .g-bd3 .m-selbox select{width: 100px;height: 30px;font-size: 14px;margin-right: 15px;outline: none;}
 
 .g-bd3 .nobt{border-top: 0;}
@@ -114,3 +114,88 @@ body{background-color: #eeeeee;}
 .m-demo .cnt a{color: #000;}
 .m-demo .date{display:inline;float:right;margin-left:-70px;}
 .m-demo img{max-width:70px;max-height:70px;}
+
+.form-control{
+	display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control{
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    height: 40px;
+    border-color: #d7d7d7;
+    background: #fff;
+    font-size: 16px;
+    -webkit-appearance: none;
+    padding: 0;
+}
+.btn{
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-submit{
+  width: 100%;
+  background: #049fbb;
+  border: 2px solid #049fbb;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

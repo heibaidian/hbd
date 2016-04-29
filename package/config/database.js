@@ -1,5 +1,5 @@
 var mongoose=require('mongoose');
-db = mongoose.createConnection('mongodb://mongodb:27017/hbd'); 
+db = mongoose.createConnection('mongodb://localhost:27017/hbd'); 
 
 db.on('error',function(error){
 	consolo.log('Connection error',error);

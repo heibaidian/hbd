@@ -68,16 +68,13 @@ angular.module('myApp.material', ['ngRoute','ng-file-model'])
 			}
 
 			$scope.opt = function(material) {
-				console.log(material);
 				$http({
 					method: $scope.method,
 					url: $scope.url,
-					data: material,
-					cache: $templateCache
+					data: material
 				}).
 				success(function(data, status) {
 					if (status == '200') {
-						console.log('in');
 						$location.path('/material');
 					}
 
@@ -89,7 +86,6 @@ angular.module('myApp.material', ['ngRoute','ng-file-model'])
 
 			var obj={};
 			$scope.submit = function(obj){
-			  // console.log(JSON.stringify(obj.testFile));
 			  $http({
 					method: 'post',
 					url: "/file/upload",
@@ -104,5 +100,7 @@ angular.module('myApp.material', ['ngRoute','ng-file-model'])
 					$scope.data = data || "Request failed";
 				});
   			};
+
+  			$scope.passData =[{'pass':0,'label':'否'},{'pass':1,'label':'是'}];
 		}
 	]);

@@ -8,9 +8,10 @@ var _material = new Schema({
 	content:String,
 	desc:String,
 	date:{ type: Date, default: Date.now },
-	star:{type:Number,min:1,max:5},
+	star:{type:Number,min:1,max:5, default: 5},
 	imgSrc:String,
-	cate:String
+	cate:String,
+	pass:{type:Number,default:1}
 });
 // export them
 var collectionName = 'material';

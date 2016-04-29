@@ -1,14 +1,19 @@
-<div class="g-bd g-bd3" ng-controller="material2Ctrl">
+<div ng-controller="material2Ctrl">
+<div class="g-bd g-bd3">
 <div class="m-selbox">
 <div class="f-cb">
+<div class="f-fl"><h2>请输入建材商：</h2></div>
+<div class="f-fl">&nbsp;&nbsp;&nbsp;<input ng-model="q2" ng-change="pageChanged()"></div>
+</div>
+<div class="f-cb">
 	<div class="f-fl"><h2>请选择建材类型：</h2></div>
-	<div class="f-fl"><select ng-model="q" ng-options="s as s for s in sort"><option value="">---类型---</option></select>
+	<div class="f-fl"><select ng-model="q" ng-options="s as s for s in sort" ng-change="pageChanged()"><option value="">---类型---</option></select>
 	</div>
 </div>
 </div>
 <div class="f-cb">
-	<div ng-repeat="d in list.list | filter:q">
-	<div class="u-box f-fl" ng-class="{last:($index+1)%3==0}">
+	<div ng-repeat="d in pagedItems">
+	<div class="u-box f-fl" ng-class="{last:($index+1)%3==0}" ng-hide="d.pass===0">
 		<div class="pos">
 			<h2>{{d.title}}</h2>
 			<div class="u-starpos">
@@ -27,5 +32,6 @@
 
 <div class="bk10"></div>
 <nav class="m-page">
-    <a href="#/limit/{{d.url}}" class="z-crt" ng-repeat="d in list.pageinfo">{{d.title}}</a>
+    <a class="z-crt" ng-repeat="d in arr" ng-click="changePage(d)">{{d}}</a>
 </nav>
+</div>
