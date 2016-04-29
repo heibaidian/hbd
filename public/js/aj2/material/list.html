@@ -13,20 +13,20 @@
 </div>
 <div class="f-cb">
 	<div ng-repeat="d in pagedItems">
-	<div class="u-box f-fl" ng-class="{last:($index+1)%3==0}" ng-hide="d.pass===0">
-		<div class="pos">
-			<h2>{{d.title}}</h2>
-			<div class="u-starpos">
-				<div class="u-star{{d.star}}"></div>
+		<div class="u-box f-fl" ng-class="{last:($index+1)%3==0}" ng-hide="d.pass===0">
+			<div class="pos">
+				<h2>{{d.title}}</h2>
+				<div class="u-starpos">
+					<div class="u-star{{d.star}}"></div>
+				</div>
+				<div class="bk10"></div>
+				<div class="maxdiv">
+					<a href="material/tlp/find/{{d._id}}"><img ng-src="{{d.imgSrc}}" /></a>
+				</div>
 			</div>
-			<div class="bk10"></div>
-			<div class="maxdiv">
-				<a href="material/tlp/find/{{d._id}}"><img ng-src="{{d.imgSrc}}" /></a>
-			</div>
+		<div ng-class="{'f-cb':($index+1)%3==0}"></div>
 		</div>
-	<div ng-class="{'f-cb':($index+1)%3==0}"></div>
-</div>
-</div>
+	</div>
 </div>
 </div>
 
