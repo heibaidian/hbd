@@ -152,6 +152,9 @@ body{background-color: #eeeeee;}
     -webkit-appearance: none;
     padding: 0;
 }
+.textarea{
+    height: 100px;
+}
 .btn{
 	display: inline-block;
     padding: 6px 12px;

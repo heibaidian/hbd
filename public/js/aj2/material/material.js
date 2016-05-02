@@ -105,7 +105,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
   			};
 
   			$scope.opt = function(material) {
-  				material.content="手机号："+material.tel+"<br />"+"地址："+material.address;
+  				material.content=material.introduction+"<br />"+"手机号："+material.tel+"<br />"+"地址："+material.address;
   				material.pass=0;
 				$http({
 					method: "post",

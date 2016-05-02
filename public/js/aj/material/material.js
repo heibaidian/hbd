@@ -102,5 +102,15 @@ angular.module('myApp.material', ['ngRoute','ng-file-model'])
   			};
 
   			$scope.passData =[{'pass':0,'label':'否'},{'pass':1,'label':'是'}];
+
+
+  			$http({
+				method: 'GET',
+				url: 'material/distinct',
+				cache: false
+			}).
+			success(function(data, status) {
+				$scope.cates = data;
+			})
 		}
 	]);
