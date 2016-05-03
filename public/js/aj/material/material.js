@@ -42,6 +42,15 @@ angular.module('myApp.material', ['ngRoute','ng-file-model'])
 			});
 		};
 
+		$http({
+			method: 'GET',
+			url: 'classes',
+			cache: false
+		}).
+		success(function(data, status) {
+			$scope.classes = data;
+		})
+
 		$scope.load();
 	}
 ])
