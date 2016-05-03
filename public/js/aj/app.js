@@ -6,7 +6,8 @@ angular.module('myApp', [
   'myApp.material',
   'myApp.module',
   'myApp.tel',
-  'myApp.article'
+  'myApp.article',
+  'myApp.classes'
 ]).
 config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
   $routeProvider.otherwise({redirectTo: '/company'});

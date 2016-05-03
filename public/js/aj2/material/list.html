@@ -7,7 +7,7 @@
 </div>
 <div class="f-cb">
 	<div class="f-fl"><h2>请选择建材类型：</h2></div>
-	<div class="f-fl"><select ng-model="q" ng-options="s as s for s in sort" ng-change="pageChanged()"><option value="">---类型---</option></select>
+	<div class="f-fl"><select ng-model="q" ng-options="s._id as s.name for s in sort" ng-change="pageChanged()"><option value="">---类型---</option></select>
 	</div>
 </div>
 </div>

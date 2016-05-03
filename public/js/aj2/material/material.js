@@ -18,7 +18,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 	function($scope, $http, $templateCache,$routeParams,$filter) {
 		$http({
 			method: 'GET',
-			url: 'material/distinct',
+			url: 'classes',
 			cache: $templateCache
 		}).
 		success(function(data, status) {
@@ -41,7 +41,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 				url: 'material/find'
 			}).
 			success(function(data) {
-				vm.filteredItems = $filter('filter')(data, {title:$scope.q2,cate:$scope.q});
+				vm.filteredItems = $filter('filter')(data, {title:$scope.q2,classes:{_id:$scope.q}});
 				
 				$scope.arr=[];
 				var len=vm.filteredItems.length%vm.itemsPerPage>0?parseInt(vm.filteredItems.length/vm.itemsPerPage)+1:parseInt(vm.filteredItems.length/vm.itemsPerPage);
@@ -75,7 +75,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 		function($scope, $http, $templateCache, $routeParams, $location) {
 			$http({
 				method: 'GET',
-				url: 'material/distinct'
+				url: 'classes'
 			}).
 			success(function(data, status) {
 				$scope.sort = data;

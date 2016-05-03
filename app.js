@@ -43,6 +43,8 @@ var admin_routes = require('./package/router/admin');
 app.use('/admin', admin_routes);
 var article_routes = require('./package/router/article');
 app.use('/article', article_routes);
+var classes_routes = require('./package/router/classes');
+app.use('/classes', classes_routes);
 var sendfile_routes = require('./package/helper/sendfile');
 app.use('/file', sendfile_routes);
 

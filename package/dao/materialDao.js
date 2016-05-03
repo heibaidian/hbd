@@ -22,7 +22,7 @@ materialDao.create = function(req, res, data) {
 };
 
 materialDao.findall = function(req, res) {
-	material.find({}, function(err, docs) {
+	material.find().populate('classes', 'name').exec(function(err, docs) {
 		if (err) {
 			console.log('Error: ', err);
 		} else {

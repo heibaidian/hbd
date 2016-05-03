@@ -14,7 +14,7 @@
 				<div>
 					<div ><h2>品牌分类：</h2></div>
 					<div>
-						<select class="form-control" ng-model="material.cate" ng-options="s for s in sort">
+						<select class="form-control" ng-model="material.classes" ng-options="s._id as s.name for s in sort">
 							<option value="">-- 选择品牌 --</option>
 						</select>
 					</div>

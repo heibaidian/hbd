@@ -106,11 +106,11 @@ angular.module('myApp.material', ['ngRoute','ng-file-model'])
 
   			$http({
 				method: 'GET',
-				url: 'material/distinct',
+				url: 'classes',
 				cache: false
 			}).
 			success(function(data, status) {
-				$scope.cates = data;
+				$scope.classes = data;
 			})
 		}
 	]);

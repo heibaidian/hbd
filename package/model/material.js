@@ -11,6 +11,7 @@ var _material = new Schema({
 	star:{type:Number,min:1,max:5, default: 5},
 	imgSrc:String,
 	cate:String,
+	classes:{type:Schema.ObjectId,ref:'Classes'},
 	pass:{type:Number,default:1}
 });
 // export them
