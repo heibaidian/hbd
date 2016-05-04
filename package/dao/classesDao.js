@@ -41,8 +41,8 @@ classesDao.findByIdAndRemove = function(req, res, id) {
 	});
 };
 
-classesDao.findByIdAndUpdate = function(req, res, id, data) {
-	classes.findByIdAndUpdate(id, data, function(err, docs) {
+classesDao.findByIdAndUpdate = function(req, res, data) {
+	classes.findByIdAndUpdate(data._id, data, function(err, docs) {
 		if (err) {
 			console.log('Error: ', err);
 		} else {
