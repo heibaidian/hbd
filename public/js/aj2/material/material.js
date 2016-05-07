@@ -87,6 +87,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 			var obj={};
 			$scope.material={};
 			$scope.imgSrc='/img/update.jpg';
+			$scope.picArr=[];
 
 			$scope.submit = function(obj){
 			  $http({
@@ -96,7 +97,8 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 				}).
 				success(function(data, status) {
 					if (status == '200') {
-						$scope.imgSrc= $scope.material.imgSrc=data;
+						$scope.material.imgSrc=data;
+						$scope.picArr.push(data);
 					}
 				}).
 				error(function(data, status) {
@@ -105,7 +107,10 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
   			};
 
   			$scope.opt = function(material) {
-  				material.content=material.introduction+"<br />"+"手机号："+material.tel+"<br />"+"地址："+material.address;
+  				var imgs="";
+  				for(var i=0;i<$scope.picArr.length;i++)
+  					imgs+='<br /><img src="'+$scope.picArr[i]+'" />';
+  				material.content=material.introduction+"<br />"+"手机号："+material.tel+"<br />"+"地址："+material.address+imgs;
   				material.pass=0;
 				$http({
 					method: "post",

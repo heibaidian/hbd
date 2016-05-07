@@ -30,6 +30,9 @@
 				<div>
 					<div><h2>品牌logo：</h2></div>
 					<div>
+						<span ng-repeat="pic in picArr">
+							<img src="{{pic}}" />
+						</span>
 						<span class="btn btn-default btn-file">
 							<img ng-model="material.imgSrc" ng-src="{{imgSrc}}"/>
 							<input type="file" ng-file-model="obj.testFile" accept="image/*"/>
