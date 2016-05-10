@@ -32,6 +32,8 @@
 
 <div class="bk10"></div>
 <nav class="m-page">
-    <a class="z-crt" ng-repeat="d in arr" ng-click="changePage(d)">{{d}}</a>
+    <select ng-model="d" ng-options="d as d for d in arr" ng-change="changePage(d)">
+		<option value="">--请选择页数--</option>
+	</select>
 </nav>
 </div>
