@@ -89,7 +89,9 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 			$scope.imgSrc='/img/update.jpg';
 			$scope.picArr=[];
 
+			$scope.show=false;
 			$scope.submit = function(obj){
+			  $scope.show=true;
 			  $http({
 					method: 'post',
 					url: "/file/upload",
@@ -97,6 +99,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 				}).
 				success(function(data, status) {
 					if (status == '200') {
+						$scope.show=false;
 						$scope.material.imgSrc=data;
 						$scope.picArr.push(data);
 					}

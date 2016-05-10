@@ -37,6 +37,7 @@
 							<img ng-model="material.imgSrc" ng-src="{{imgSrc}}"/>
 							<input type="file" ng-file-model="obj.testFile" accept="image/*"/>
 						</span>
+						<p ng-show="show">正在上传中...</p>
 						<input type="submit" value="上传" class="btn btn-default" ng-click="submit(obj)">
 					</div>
 				</div>
