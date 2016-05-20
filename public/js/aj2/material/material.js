@@ -10,6 +10,8 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 			}).when('/tuiguang', {
 				templateUrl: 'js/aj2/material/tuiguang.html',
 				controller: 'material3Ctrl'
+			}).when('/success', {
+				templateUrl: 'js/aj2/material/success.html'
 			});
 		}
 	])
@@ -122,7 +124,7 @@ angular.module('myAppList.material', ['ngRoute','ng-file-model'])
 				}).
 				success(function(data, status) {
 					if (status == '200') {
-						$location.path('/');
+						$location.path('/success');
 					}
 
 				}).
